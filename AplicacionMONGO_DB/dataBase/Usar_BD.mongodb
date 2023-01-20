@@ -1,0 +1,19 @@
+//Usar la base de datos
+
+use('vinos_jiquilpan');
+db.categorias.find({});
+
+//Consulta productos 
+use('vinos_jiquilpan');
+db.productos.find({});
+
+use('vinos_jiquilpan');
+db.productos.find(
+  {"idCategoria":600}
+  ).sort({"idProducto":-1});
+
+//Categoria tequilas
+use('vinos_jiquilpan');
+db.productos.find(
+  {"idCategoria.nombreCategoriaProducto":"Whiskey"}
+  ).sort({"idProducto":1});

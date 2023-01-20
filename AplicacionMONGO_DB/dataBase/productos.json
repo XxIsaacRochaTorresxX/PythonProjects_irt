@@ -1,0 +1,21 @@
+{
+    "_id" : 1000,
+    "codigoBarras" : "TEQ-1000",
+    "$ref": "categorias", 
+    "nombre" : "Tequila Centenario",
+    "costo" : 480.8,
+    "listaCostos":[
+        {"costo" : 460.8, "fecha": "Date(2022,-8-01)"},
+        {"costo" : 440.8, "fecha": "Date(2022,-8-01)"}
+
+    ],
+    "descuento" :[
+        { "_id" : 1, "cantidad_1" : 3, "utilidad" : 15},
+        { "_id" : 2, "cantidad_1" : 6, "utilidad" : 8},
+        { "_id" : 3, "cantidad_1" : 10,"utilidad" : 3}
+    ],
+    "ganancia" : 10,
+    "existencia" : 100,
+    "tipo" : 1,
+    "img" : ["tequilaCentenario.jpg"]
+}
