@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data.titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqIBLmDh21kOBw0l7Fh9FeNyYY7YhNYCDrlARR2Tw&s">
+        <img src="{{ url_for('static', filename='img/img_1.jpg') }}">
+        <h1>{{ name }} {{ data.saludo}}</h1>
+    </div>
+
+
+    <h2>Cursos en los que no me especializo</h2>
+    {% if data.numero_cursos > 0:%}
+        <ul>
+            {% for curso in data.cursos: %}
+                <li>{{ curso }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>No existen cursos</h2>
+    {% endif %}
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
